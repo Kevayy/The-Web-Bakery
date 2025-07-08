@@ -1,52 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Web Bakery - Testopdracht</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Web Bakery - Test Opdracht</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  
+  <!-- Google Font: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+    }
+
+    .hero {
+      background: url('./img/header.png') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-weight: 600;
+      font-style: SemiBold;
+      font-size: 80px;
+      line-height: 79px;
+      text-transform: uppercase;
+    }
+
+    .info-box {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      background: white;
+      color: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 130px;
+    }
+
+    .info-box .big-number {
+      font-size: 2.5rem;
+      color: #f9563b;
+      font-weight: 800;
+    }
+
+    .btn-interesse {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: #000;
+      padding: 8px 16px;
+      font-weight: 600;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    .btn-interesse i {
+      color: #f9563b;
+      margin-right: 8px;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .navbar .nav-link {
+      font-weight: 600;
+      color: white !important;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
-<body style="background-image: url('./img/header.png');">
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/logo.png" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Appartementen</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Woningaanbod</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Locatie</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container text-center bottom">
-        <h1 class="text-center text-white">Stijlvol wonen tussen stad en natuur</h1>
+<body>
+  <header class="hero">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Appartementen</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Woningaanbod</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Locatie</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Text -->
+    <div class="hero-overlay text-white">
+      <h1>Stijlvol wonen<br>tussen stad en natuur</h1>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- Info Box -->
+    <div class="info-box">
+      <div style="font-size: 12px;">Start verkoop<br>november</div>
+      <div class="big-number">157</div>
+      <div>luxe appartementen</div>
+    </div>
+
+    <!-- Interesse Button -->
+    <div class="btn-interesse">
+      <i class="bi bi-telephone-fill"></i> Interesse
+    </div>
+  </header>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </body>
 </html>
